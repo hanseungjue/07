@@ -2,18 +2,19 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-int inc(int counter)
-{
-    counter++;
-    return counter;
-}
+void f(void);
+int i;
 
 int main(int argc, char *argv[]) {
-	int i=10;
-    printf("함수 호출전 i=%d\n", i);
-    inc(i);
-    printf("함수 호출후 i=%d\n", i);
+    for ( i=0; i<5; i++ )
+    {
+        f();
+    }
     return 0;
 }
 
+void f(void)
+{
+    for ( i=0; i<10; i++)
+        printf("#");
+}
